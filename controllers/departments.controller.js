@@ -52,7 +52,7 @@ exports.update = async (req, res) => {
       if(dep) {
         await Department.updateOne({ _id: req.params.id }, { $set: { name: name }});
         const updep = await Department.findById(req.params.id);
-        res.json({ updep });
+        res.json( updep );
       }
       else res.status(404).json({ message: 'Not found...' });
     }
