@@ -21,7 +21,7 @@ describe('Employee', () => {
     it('should throw an error if firstName are not a string', () => {
 
         const cases = [
-            {firstName: [], lastName: 'Doe', department: 'idsa34s'},
+            {firstName: [], lastName: 'Dose', department: 'idsa34s'},
             {firstName: {}, lastName: 'kek', department: 'id34343'},
         ];
         for(let nameEmp of cases) {
@@ -68,7 +68,3 @@ describe('Employee', () => {
 
     
 });
-
-after(() => {
-    mongoose.models = {};
-  });
